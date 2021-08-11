@@ -1,4 +1,4 @@
-# Bringing-Events-into-Video-Deblurring-with-Non-consecutively-Blurry-Frames （ICCV2021）
+# Bringing Events into Video Deblurring with Non consecutively Blurry Frames （ICCV2021）
 
 ---
 
