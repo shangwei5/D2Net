@@ -54,9 +54,24 @@ _(i)  If you have downloaded the pretrained models，please put PWC_Flow model t
 
 _(ii) If you have downloaded the datasets，please put them to './dataset'._
 
+If you need event data, please first run:
+```
+python event_txt2npy.py
+```
+Converting event.txt to event.npy .
 
+## Getting Started
 
-The code and dataset will be coming soon!
+### 1) Testing
+```
+bash Inference.sh
+```
+The results on GOPRO_Random are also available at [BaiduYun].
+
+### 2) Training
+```
+python main_d2net.py
+```
 
 
 
