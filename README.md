@@ -67,9 +67,9 @@ Converting event.txt to event.npy .
 bash Inference.sh
 ```
 The results on GOPRO_Random are also available at [BaiduYun].
-*Note:*
 
-The results in our paper is testing on 4X down sampling GOPRO due to the large event data. Now we retrain our method on original resolution of GOPRO.
+*Note:
+The results in our paper is testing on 4X down sampling GOPRO due to the large event data. Now we retrain our method on original resolution of GOPRO.*
 
 ### 2) Training
 ```
