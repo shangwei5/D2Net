@@ -34,6 +34,14 @@ Please download the testing datasets from [BaiduYun](https://pan.baidu.com/s/1J-
         |--video 2
          :
         |--video n
+    |--Event
+        |--video 1
+            |--frame 1
+            |--frame 2
+                ：  
+        |--video 2
+         :
+        |--video n
     |--label
         |--video 1
         |--video 2
