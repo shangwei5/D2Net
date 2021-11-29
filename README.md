@@ -50,8 +50,9 @@
 ## Download
 Please download the testing datasets from [BaiduYun](https://pan.baidu.com/s/1J-vdY1e1jWp6B1AYzcJG6g)[ho6f] and the training datasets from [BaiduYun]. And pretrained PWCFlow model can be downloaded [Here] and Our D2Net model trained on non-consecutively blurry GOPRO dataset can be download [Here].
 
-_(i)  If you have downloaded the pretrained models，please put PWC_Flow model to './pretrain_models' and  D2Net model to './code/logs', respectively.
-_(ii) If you have downloaded the datasets，please put them to './dataset'.
+_(i)  If you have downloaded the pretrained models，please put PWC_Flow model to './pretrain_models' and  D2Net model to './code/logs', respectively._
+
+_(ii) If you have downloaded the datasets，please put them to './dataset'._
 
 
 
