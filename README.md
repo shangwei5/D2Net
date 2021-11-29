@@ -15,6 +15,32 @@
 
 Please download the testing datasets from [BaiduYun](https://pan.baidu.com/s/1J-vdY1e1jWp6B1AYzcJG6g)[ho6f] and the training datasets from [BaiduYun].
 
+### Dataset Organization Form
+```
+|--dataset
+    |--blur  
+        |--video 1
+            |--frame 1
+            |--frame 2
+                ：  
+        |--video 2
+            :
+        |--video n
+    |--gt
+        |--video 1
+            |--frame 1
+            |--frame 2
+                ：  
+        |--video 2
+         :
+        |--video n
+    |--label
+        |--video 1
+        |--video 2
+         :
+        |--video n
+```
+
 
 
 The code and dataset will be coming soon!
