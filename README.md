@@ -5,8 +5,8 @@
  Existing video deblurring methods assume consecutively blurry frames, while neglecting the fact that sharp frames usually appear nearby blurry frame. In this paper, we develop a principled framework D2Nets for video deblurring to exploit non-consecutively blurry frames, and propose a flexible event fusion module (EFM) to bridge the gap between event-driven and video deblurring.
 
 ## Prerequisites
-- Python >= 3.6, PyTorch >= 1.1.0, numpy, matplotlib, opencv, imageio, scikit-image, tqdm, cupy
-- Requirements: opencv-python, tensorboardX
+- Python >= 3.6, PyTorch >= 1.1.0
+- Requirements: opencv-python, numpy, matplotlib, imageio, scikit-image, tqdm, cupy
 - Platforms: Ubuntu 20.04, cuda-10.0, 2*2080Ti
 
 
