@@ -374,7 +374,7 @@ class Inference:
         return y
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='CDVD-TSP-Inference')
+    parser = argparse.ArgumentParser(description='D2Net-Inference')
 
     parser.add_argument('--save_image', action='store_true', default=True, help='save image if true')
     parser.add_argument('--border', action='store_true', default=True, help='restore border images of video if true')
