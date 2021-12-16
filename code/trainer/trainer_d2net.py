@@ -9,7 +9,7 @@ import torch.nn.parallel as P
 class Trainer_d2net(Trainer):
     def __init__(self, args, loader, my_model, my_loss, ckp):
         super(Trainer_d2net, self).__init__(args, loader, my_model, my_loss, ckp)
-        print("Using Trainer-CDVD-TSP")
+        print("Using Trainer-D2Net")
 
     def make_optimizer(self):
         kwargs = {'lr': self.args.lr, 'weight_decay': self.args.weight_decay}
