@@ -48,17 +48,11 @@
 ```
 
 ## Download
-Please download the testing datasets from [BaiduYun](https://pan.baidu.com/s/1J-vdY1e1jWp6B1AYzcJG6g)[password: ho6f] and the training datasets from [BaiduYun](https://pan.baidu.com/s/1RemasH9D9qYubruGhuZF8w)[password: ju3q]. And pretrained PWCFlow model can be downloaded [Here](https://pan.baidu.com/s/1EIPwGE_M9dsMic-ena6JVg)[password: wkt0] and Our D2Net model trained on non-consecutively blurry GOPRO dataset can be download [Here].
+Please download the testing datasets from [BaiduYun](https://pan.baidu.com/s/1J-vdY1e1jWp6B1AYzcJG6g)[password: ho6f] and the training datasets from [BaiduYun](https://pan.baidu.com/s/1RemasH9D9qYubruGhuZF8w)[password: ju3q]. And pretrained PWCFlow model can be downloaded [Here](https://pan.baidu.com/s/1EIPwGE_M9dsMic-ena6JVg)[password: wkt0] and Our D2Net model trained on non-consecutively blurry GOPRO dataset can be download [Here](https://pan.baidu.com/s/151M8IZCIgGv1iwbb4Bi0HA)[password: 16fr]
 
 _(i)  If you have downloaded the pretrained models，please put PWC_Flow model to './pretrain_models' and  D2Net model to './code/logs', respectively._
 
 _(ii) If you have downloaded the datasets，please put them to './dataset'._
-
-If you need event data, please first run:
-```
-python event_txt2npy.py
-```
-Converting event.txt to event.npy .
 
 ## Getting Started
 
@@ -66,10 +60,10 @@ Converting event.txt to event.npy .
 ```
 bash Inference.sh
 ```
-The results on GOPRO_Random are also available at [BaiduYun].
+The results on GOPRO_Random are also available at [BaiduYun](https://pan.baidu.com/s/1v81oA9Tvq_zwMUMeceLVLQ)[password: d3as]
 
 *Note:
-The results in our paper is testing on 4X down sampling GOPRO due to the large event data. Now we retrain our method on original resolution of GOPRO.*
+The results in our paper is testing on 4X down sampling GOPRO due to the large event data. Now we have retrained our method on original resolution of GOPRO.*
 
 ### 2) Training
 ```
