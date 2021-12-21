@@ -92,6 +92,6 @@ If you use any part of our code, or D2Net and non consecutively blurry dataset a
   }
 ```
 
-##Acknowledgements
+## Acknowledgements
 
 This code is built on [CDVD-TSP](https://github.com/csbhr/CDVD-TSP). We thank the authors for sharing the codes.
