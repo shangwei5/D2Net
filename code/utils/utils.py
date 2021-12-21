@@ -37,6 +37,16 @@ def np2Tensor(*args, rgb_range=255, n_colors=1):
 
     return [_np2Tensor(a) for a in args]
 
+def eventnp2Tensor(*args):
+    def _np2Tensor(img):
+        img = img.astype('float64')
+        np_transpose = np.ascontiguousarray(img.transpose((2, 0, 1)))  # NHWC -> NCHW
+        tensor = torch.from_numpy(np_transpose).float()  # numpy -> tensor
+
+        return tensor
+
+    return [_np2Tensor(a) for a in args]
+
 
 def data_augment(*args, hflip=True, rot=True):
     hflip = hflip and random.random() < 0.5
