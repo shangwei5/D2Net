@@ -66,10 +66,15 @@ The results on GOPRO_Random are also available at [BaiduYun](https://pan.baidu.c
 The results in our paper is testing on 4X down sampling GOPRO due to the large event data. Now we have retrained our method on original resolution of GOPRO.*
 
 ### 2) Training
+Without event data:
 ```
 python main_d2net.py
 ```
-
+With event data:
+```
+python main_d2net_event.py
+```
+Please check the path for you dataset.
 
 
 
@@ -86,3 +91,7 @@ If you use any part of our code, or D2Net and non consecutively blurry dataset a
       pages     = {4531-4540}
   }
 ```
+
+##Acknowledgements
+
+This code is built on [CDVD-TSP](https://github.com/csbhr/CDVD-TSP). We thank the authors for sharing the codes.
