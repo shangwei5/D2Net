@@ -12,7 +12,7 @@ class DVD_NFS_EVENT(videodata_nfs_event.VIDEODATA):
         self.dir_gt = os.path.join(self.apath, 'gt')
         self.dir_input = os.path.join(self.apath, 'blur')
         self.dir_label = os.path.join(self.apath, 'label')
-        self.dir_event = os.path.join(self.apath, 'Event_npy')
+        self.dir_event = os.path.join(self.apath, 'Event')
         print("DataSet GT path:", self.dir_gt)
         print("DataSet INPUT path:", self.dir_input)
         print("DataSet label path:", self.dir_label)
