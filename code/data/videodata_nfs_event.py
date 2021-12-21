@@ -5,7 +5,7 @@ import imageio
 import torch
 import torch.utils.data as data
 import utils.utils as utils
-
+from data.event_txt2npy import txt2npy
 
 class VIDEODATA(data.Dataset):
     def __init__(self, args, name='', train=True):
@@ -44,7 +44,7 @@ class VIDEODATA(data.Dataset):
         self.dir_gt = os.path.join(self.apath, 'gt')
         self.dir_input = os.path.join(self.apath, 'blur')
         self.dir_label = os.path.join(self.apath, 'label')
-        self.dir_event = os.path.join(self.apath, 'Event_npy')
+        self.dir_event = os.path.join(self.apath, 'Event')
         print("DataSet GT path:", self.dir_gt)
         print("DataSet INPUT path:", self.dir_input)
         print("DataSet label path:", self.dir_label)
@@ -196,7 +196,7 @@ class VIDEODATA(data.Dataset):
         f_inputs.append(self.images_input[video_idx][self.SubSIndex_label[video_idx][frame_idx+self.n_seq-1]])
         gts = np.array([imageio.imread(hr_name) for hr_name in f_gts])
         inputs = np.array([imageio.imread(lr_name) for lr_name in f_inputs])
-        events = np.array([np.load(event_name).transpose(1,2,0) for event_name in f_events])
+        events = np.array([txt2npy(event_name).transpose(1,2,0) for event_name in f_events])
         # print(events.shape)
         filenames = [os.path.split(os.path.dirname(name))[-1] + '.' + os.path.splitext(os.path.basename(name))[0]
                      for name in f_inputs]
