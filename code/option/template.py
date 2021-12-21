@@ -35,6 +35,23 @@ def set_template(args):
         args.epochs = 500
         args.batch_size = 8
         args.n_GPUs = 2
-        args.pre_train = '../experiment/D2Net/model/model_best.pt'
+        args.pre_train = './logs/model_best.pt'
+    elif args.template == 'D2NET_Offical':
+        args.task = "VideoDeblur"
+        args.model = "D2NET_Offical"
+        args.n_sequence = 5
+        args.n_frames_per_video = 300
+        args.n_feat = 32
+        args.n_resblock = 3
+        args.size_must_mode = 4
+        args.loss = '1*L1+2*HEM'
+        args.lr = 1e-4
+        args.lr_decay = 200
+        args.dir_data = '../dataset/GOPRO_Random/train'
+        args.dir_data_test = '../dataset/GOPRO_Random/test'
+        args.epochs = 500
+        args.batch_size = 8
+        args.n_GPUs = 2
+        args.pre_train = './logs/model_best.pt'
     else:
         raise NotImplementedError('Template [{:s}] is not found'.format(args.template))
