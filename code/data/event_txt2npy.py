@@ -44,34 +44,37 @@ def txt2npy(event_name):
 
     return event
 
-for video_index in range(len(vid_event_names)):
-    event_dir_names = sorted(glob.glob(os.path.join(vid_event_names[video_index], '*')))
-    print(vid_event_names[video_index])
-    mat_name = os.path.join(save_result_path, str(vid_event_names[video_index].split('/')[-1]))
-    os.makedirs(mat_name, exist_ok=True)
-    length = len(event_dir_names)
-    print("Length: %d" % length)
 
-    for i in range(length):
-        # 提取出对应的event
-        event = txt2npy(event_dir_names[i])
-        print(event_dir_names[i])
-        # print(event.shape)
-        np.save(os.path.join(mat_name, event_dir_names[i].split('/')[-1].split('.')[0]+'.npy'), event)
-        # save_test_path1 = os.path.join('/home/sw/sw/dataset/Event-data/GOPRO_large_all/test/Random', 'event_all')
-        # os.makedirs(save_test_path1, exist_ok=True)
-        # for j in range(40):
-        #     # print(event[j])
-        #     cv2.imwrite(os.path.join(save_test_path1, "%d.png" % j), abs(event[j])*255)
-        # event = np.mean(event, 0)#, keepdims=True)
-        # print(event.shape)
-        # event = np.uint8(abs(event)*255)
-        # # event = cv2.equalizeHist(event)
-        # cv2.imwrite(os.path.join(save_test_path, "event.png"), event)
 
-    #     if i == 0:
-    #         break
-    # break
+if __name__ == '__main__':
+    for video_index in range(len(vid_event_names)):
+        event_dir_names = sorted(glob.glob(os.path.join(vid_event_names[video_index], '*')))
+        print(vid_event_names[video_index])
+        mat_name = os.path.join(save_result_path, str(vid_event_names[video_index].split('/')[-1]))
+        os.makedirs(mat_name, exist_ok=True)
+        length = len(event_dir_names)
+        print("Length: %d" % length)
+
+        for i in range(length):
+            # 提取出对应的event
+            event = txt2npy(event_dir_names[i])
+            print(event_dir_names[i])
+            # print(event.shape)
+            np.save(os.path.join(mat_name, event_dir_names[i].split('/')[-1].split('.')[0]+'.npy'), event)
+            # save_test_path1 = os.path.join('/home/sw/sw/dataset/Event-data/GOPRO_large_all/test/Random', 'event_all')
+            # os.makedirs(save_test_path1, exist_ok=True)
+            # for j in range(40):
+            #     # print(event[j])
+            #     cv2.imwrite(os.path.join(save_test_path1, "%d.png" % j), abs(event[j])*255)
+            # event = np.mean(event, 0)#, keepdims=True)
+            # print(event.shape)
+            # event = np.uint8(abs(event)*255)
+            # # event = cv2.equalizeHist(event)
+            # cv2.imwrite(os.path.join(save_test_path, "event.png"), event)
+
+        #     if i == 0:
+        #         break
+        # break
 
 
 
