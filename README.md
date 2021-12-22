@@ -65,6 +65,15 @@ The results on GOPRO_Random are also available at [BaiduYun](https://pan.baidu.c
 *Note:
 The results in our paper is testing on 4X down sampling GOPRO due to the large event data. Now we have retrained our method on original resolution of GOPRO.*
 
+###
+Average PSNR/SSIM values on GOPRO_Random dataset:
+
+Dataset        |   DMPHN   |   STFAN   |  CDVD-TSP |   ESTRNN  |   D2Net   |   D2Net*
+---------------|-----------|-----------|-----------|-----------|-----------|-----------
+GOPRO_Random   |32.09/0.897|31.76/0.873|33.76/0.925|33.52/0.912|35.53/0.948|35.72/0.951
+
+
+
 ### 2) Training
 Without event data:
 ```
