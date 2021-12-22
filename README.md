@@ -85,7 +85,9 @@ python main_d2net_event.py
 ```
 Please check the path for you dataset.
 
+## To Do
 
+Training on GOPRO offical dataset...
 
 
 ## Cite
