@@ -13,13 +13,16 @@ vid_event_names = sorted(glob.glob(os.path.join(event_path, '*')))
 
 def txt2npy(event_name):
     event_sequence = open(event_name, 'r')  # 打开event
+    EVENT = np.loadtxt(event_name)
+    start_time = float(EVENT[0][0])
+    end_time = float(EVENT[-1][0])
     event_frame = np.zeros([40, 720, 1280], int)
-    frame_index = 0.05
+    frame_index = (end_time - start_time) / 20  # 1/20
     time = 1
     for e in event_sequence:
         e = e.rstrip()
         event = e.split()  # t,w,h,p   w和h要颠倒一下
-        if float(event[0]) < time * frame_index:
+        if float(event[0])-start_time < time * frame_index:
             if time == 21:
                 time = 20
             if int(event[3]) > 0:
