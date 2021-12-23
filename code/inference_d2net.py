@@ -139,7 +139,7 @@ class Inference:
                     h, w, c = inputs[self.n_seq // 2].shape
                     in_tensor = self.numpy2tensor(inputs).to(self.device)
                     if h % self.size_must_mode != 0 or w % self.size_must_mode != 0:
-                        in_tensor = F.pad(in_tensor, pad=[0, w % 4, 0, h % 4, 0, 0], mode='replicate')
+                        in_tensor = F.pad(in_tensor, pad=[0, 4-w % 4, 0, 4-h % 4, 0, 0], mode='replicate')
                     preprocess_time = time.time()
                     # print(in_tensor.size(), bm_tensor.size(), label_tensor.size())
                     output = self.forward_chop(in_tensor)  #, bm_tensor, label_tensor
