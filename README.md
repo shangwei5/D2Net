@@ -78,11 +78,11 @@ GOPRO_Random   |32.09/0.897|31.76/0.873|33.76/0.925|33.52/0.912|35.53/0.948|35.7
 ### 2) Training
 Without event data:
 ```
-python main_d2net.py
+python main_d2net.py --template D2NET
 ```
 With event data:
 ```
-python main_d2net_event.py
+python main_d2net_event.py --template D2NET_EVENT
 ```
 Please check the path for you dataset.
 
