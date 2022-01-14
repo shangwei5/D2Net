@@ -11,12 +11,12 @@ os.makedirs(save_result_path, exist_ok=True)
 vid_event_names = sorted(glob.glob(os.path.join(event_path, '*')))
 
 
-def txt2npy(event_name):
+def txt2npy(event_name, h=720, w=1280):
     event_sequence = open(event_name, 'r')  # 打开event
     EVENT = np.loadtxt(event_name)
     start_time = float(EVENT[0][0])
     end_time = float(EVENT[-1][0])
-    event_frame = np.zeros([40, 720, 1280], int)
+    event_frame = np.zeros([40, h, w], int)
     frame_index = (end_time - start_time) / 20  # 1/20
     time = 1
     for e in event_sequence:
