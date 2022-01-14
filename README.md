@@ -9,6 +9,9 @@
 - Requirements: opencv-python, numpy, matplotlib, imageio, scikit-image, tqdm, cupy
 - Platforms: Ubuntu 20.04, cuda-10.0, 2*2080Ti
 
+## Updatas
+[2022-01-14]Our D2Net model trained on consecutively blurry GOPRO dataset can be download [Here](https://pan.baidu.com/s/1SKnyk7EPuWqeQkUBWKKZUg)[password: blrf]
+
 
 ## Datasets
   GOPRO_Random: To satisfy our assumption that sharp frames exist in a blurry video, we generate non-consecutively blurry frames in a video by randomly averaging adjacent sharp frames, i.e., the average number is randomly chosen from 1 to 15. And we assume that a generated frame **Bi** is sharp if the number of averaging frames is smaller than 5, i.e., label is 1, otherwise label is 0. It is worth noting that we randomly generate 50% blurry frames in a video, while the other 50% frames are sharp, without constraining that there must be 2 sharp ones in consecutive 7 frame.
@@ -74,6 +77,11 @@ Dataset        |   DMPHN   |   STFAN   |  CDVD-TSP |   ESTRNN  |   D2Net   |   D
 GOPRO_Random   |32.09/0.897|31.76/0.873|33.76/0.925|33.52/0.912|35.53/0.948|35.72/0.951
 
 
+For testing consecutively blurry dataset, please put D2Net official model to './code/offical_logs'
+```
+bash Inference_official.sh
+```
+
 
 ### 2) Training
 Without event data:
@@ -86,9 +94,7 @@ python main_d2net_event.py --template D2NET_EVENT
 ```
 Please check the path for you dataset.
 
-## To Do
 
-Training on GOPRO offical dataset...
 
 
 ## Cite
