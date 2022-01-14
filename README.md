@@ -60,6 +60,7 @@ _(ii) If you have downloaded the datasets，please put them to './dataset'._
 ## Getting Started
 
 ### 1) Testing
+You need first choose w/ or w/o event data in _'.sh'._
 ```
 bash Inference.sh
 ```
@@ -77,7 +78,8 @@ Dataset        |   DMPHN   |   STFAN   |  CDVD-TSP |   ESTRNN  |   D2Net   |   D
 GOPRO_Random   |32.09/0.897|31.76/0.873|33.76/0.925|33.52/0.912|35.53/0.948|35.72/0.951
 
 
-For testing consecutively blurry dataset, please put D2Net official model to './code/offical_logs'
+For testing consecutively blurry dataset, please put D2Net official model to './code/offical_logs'.
+You need first choose w/ or w/o event data in _'.sh'._
 ```
 bash Inference_official.sh
 ```
