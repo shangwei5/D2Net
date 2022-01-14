@@ -10,7 +10,7 @@
 - Platforms: Ubuntu 20.04, cuda-10.0, 2*2080Ti
 
 ## Updatas
-[2022-01-14]Our D2Net model trained on consecutively blurry GOPRO dataset can be download [Here](https://pan.baidu.com/s/1SKnyk7EPuWqeQkUBWKKZUg)[password: blrf]
+[2022-01-14] Our D2Net model trained on consecutively blurry GOPRO dataset can be download [Here](https://pan.baidu.com/s/1SKnyk7EPuWqeQkUBWKKZUg)[password: blrf]
 
 
 ## Datasets
